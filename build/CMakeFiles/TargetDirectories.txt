@@ -1,0 +1,6 @@
+C:/Users/akg98/CS372CPS/build/CMakeFiles/CS372CPS.dir
+C:/Users/akg98/CS372CPS/build/CMakeFiles/tests.dir
+C:/Users/akg98/CS372CPS/build/CMakeFiles/edit_cache.dir
+C:/Users/akg98/CS372CPS/build/CMakeFiles/rebuild_cache.dir
+C:/Users/akg98/CS372CPS/build/_deps/catch2-build/CMakeFiles/edit_cache.dir
+C:/Users/akg98/CS372CPS/build/_deps/catch2-build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\CS372CPS.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\CS372CPS.dir/objects.a @CMakeFiles\CS372CPS.dir\objects1.rsp
+C:\MinGW\bin\mingw32-g++.exe -g -Wl,--whole-archive CMakeFiles\CS372CPS.dir/objects.a -Wl,--no-whole-archive -o CS372CPS.exe -Wl,--out-implib,libCS372CPS.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CS372CPS.dir\linklibs.rsp

@@ -1,0 +1,27 @@
+[
+{
+  "directory": "C:/Users/akg98/CS372CPS/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -std=gnu++1z -o CMakeFiles\\CS372CPS.dir\\main.cpp.obj -c C:\\Users\\akg98\\CS372CPS\\main.cpp",
+  "file": "C:/Users/akg98/CS372CPS/main.cpp"
+},
+{
+  "directory": "C:/Users/akg98/CS372CPS/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -std=gnu++1z -o CMakeFiles\\CS372CPS.dir\\Shape.cpp.obj -c C:\\Users\\akg98\\CS372CPS\\Shape.cpp",
+  "file": "C:/Users/akg98/CS372CPS/Shape.cpp"
+},
+{
+  "directory": "C:/Users/akg98/CS372CPS/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\tests.dir\\testsmain.cpp.obj -c C:\\Users\\akg98\\CS372CPS\\testsmain.cpp",
+  "file": "C:/Users/akg98/CS372CPS/testsmain.cpp"
+},
+{
+  "directory": "C:/Users/akg98/CS372CPS/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\tests.dir\\tests.cpp.obj -c C:\\Users\\akg98\\CS372CPS\\tests.cpp",
+  "file": "C:/Users/akg98/CS372CPS/tests.cpp"
+},
+{
+  "directory": "C:/Users/akg98/CS372CPS/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\tests.dir\\Shape.cpp.obj -c C:\\Users\\akg98\\CS372CPS\\Shape.cpp",
+  "file": "C:/Users/akg98/CS372CPS/Shape.cpp"
+}
+]

@@ -17,7 +17,7 @@ set(error_code 1)
 set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
-    COMMAND "C:/Program Files/Git/cmd/git.exe"  clone --no-checkout --config "advice.detachedHead=false" "https://github.com/catchorg/Catch2.git" "catch2-src"
+    COMMAND "C:/Program Files/Git/mingw64/bin/git.exe"  clone --no-checkout --config "advice.detachedHead=false" "https://github.com/catchorg/Catch2.git" "catch2-src"
     WORKING_DIRECTORY "C:/Users/akg98/CS372CPS/build/_deps"
     RESULT_VARIABLE error_code
     )
@@ -32,7 +32,7 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "C:/Program Files/Git/cmd/git.exe"  checkout v2.x --
+  COMMAND "C:/Program Files/Git/mingw64/bin/git.exe"  checkout v2.x --
   WORKING_DIRECTORY "C:/Users/akg98/CS372CPS/build/_deps/catch2-src"
   RESULT_VARIABLE error_code
   )
@@ -43,7 +43,7 @@ endif()
 set(init_submodules TRUE)
 if(init_submodules)
   execute_process(
-    COMMAND "C:/Program Files/Git/cmd/git.exe"  submodule update --recursive --init 
+    COMMAND "C:/Program Files/Git/mingw64/bin/git.exe"  submodule update --recursive --init 
     WORKING_DIRECTORY "C:/Users/akg98/CS372CPS/build/_deps/catch2-src"
     RESULT_VARIABLE error_code
     )
