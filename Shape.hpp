@@ -1,6 +1,7 @@
 //
 // Created by Chris Hartman on 3/5/21.
 //
+// Modified By Gannon Higgins 4/24/2021
 
 #ifndef CS372CPS_SHAPE_HPP
 #define CS372CPS_SHAPE_HPP
@@ -102,32 +103,50 @@ private:
    Rot _rotation;
 };
 
-class LayeredShape : public Shape {
+class CompositeShape : public Shape {
+public:
+  CompositeShape(std::initializer_list<ShapePtr> shapes);
+  [[nodiscard]] double getHeight() const override;
+  [[nodiscard]] double getWidth() const override;
+  [[nodiscard]] std::string getPostScript() const override;
+protected:
+  [[nodiscard]] virtual std::string moveToPositionForShape(const Shape& shape) = 0;
+  virtual void heightOp(double& totalHeight, const Shape& shape) const = 0;
+  virtual void widthOp(double& totalWidth, const Shape& shape) const = 0;
+private:
+  std::vector<ShapePtr> _shapes;
+};
+
+class LayeredShape : public CompositeShape {
 public:
    LayeredShape(std::initializer_list<ShapePtr> shapes);
-   [[nodiscard]] double getHeight() const override;
-   [[nodiscard]] double getWidth() const override;
    [[nodiscard]] std::string getPostScript() const override;
+protected:
+   void heightOp(double& totalHeight, const Shape& shape) const override;
+   void widthOp(double& totalWidth, const Shape& shape) const override;
+   [[nodiscard]] std::string moveToPositionForShape(const Shape& shape) override = 0;
 private:
-   std::vector<ShapePtr> _shapes;
+  std::vector<ShapePtr> _shapes;
 };
 
-class VerticalShape : public Shape {
+class VerticalShape : public CompositeShape {
 public:
    VerticalShape(std::initializer_list<ShapePtr> shapes);
-   [[nodiscard]] double getHeight() const override;
-   [[nodiscard]] double getWidth() const override;
-   [[nodiscard]] std::string getPostScript() const override;
+protected:
+  std::string moveToPositionForShape(const Shape& shape) override;
+  void heightOp(double& totalHeight, const Shape& shape) const override;
+  void widthOp(double& totalWidth, const Shape& shape) const override;
 private:
    std::vector<ShapePtr> _shapes;
 };
 
-class HorizontalShape : public Shape {
+class HorizontalShape : public CompositeShape {
 public:
    HorizontalShape(std::initializer_list<ShapePtr> shapes);
-   [[nodiscard]] double getHeight() const override;
-   [[nodiscard]] double getWidth() const override;
-   [[nodiscard]] std::string getPostScript() const override;
+protected:
+  std::string moveToPositionForShape(const Shape& shape) override;
+  void heightOp(double& totalHeight, const Shape& shape) const override;
+  void widthOp(double& totalWidth, const Shape& shape) const override;
 private:
    std::vector<ShapePtr> _shapes;
 };
